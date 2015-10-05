@@ -13,7 +13,7 @@ module.exports = function (cb) {
 
 		var get = function (sel) {
 			return parseInt($(sel).text(), 10);
-		}
+		};
 
 		cb(null, {
 			ios: get('.ios .average'),
