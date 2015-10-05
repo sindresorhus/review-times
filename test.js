@@ -1,15 +1,11 @@
-'use strict';
-var test = require('ava');
-var reviewTimes = require('./');
+import test from 'ava';
+import fn from './';
 
-test(function (t) {
-	t.plan(5);
+test(async t => {
+	const times = await fn();
 
-	reviewTimes(function (err, times) {
-		t.assert(!err, err);
-		t.assert(typeof times.ios === 'number');
-		t.assert(typeof times.mac === 'number');
-		t.assert(times.ios > 0);
-		t.assert(times.mac > 0);
-	});
+	t.is(typeof times.ios, 'number');
+	t.is(typeof times.mac, 'number');
+	t.true(times.ios > 0);
+	t.true(times.mac > 0);
 });
