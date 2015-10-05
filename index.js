@@ -2,22 +2,17 @@
 var got = require('got');
 var cheerio = require('cheerio');
 
-module.exports = function (cb) {
-	got('appreviewtimes.com', function (err, data) {
-		if (err) {
-			cb(err);
-			return;
-		}
-
-		var $ = cheerio.load(data);
+module.exports = function () {
+	return got('appreviewtimes.com').then(function (data) {
+		var $ = cheerio.load(data.body);
 
 		var get = function (sel) {
 			return parseInt($(sel).text(), 10);
 		};
 
-		cb(null, {
+		return {
 			ios: get('.ios .average'),
 			mac: get('.mac .average')
-		});
+		};
 	});
 };

@@ -30,7 +30,7 @@ $ npm install --save review-times
 ```js
 var reviewTimes = require('review-times');
 
-reviewTimes(function (err, times) {
+reviewTimes.then(function (times) {
 	console.log(times);
 	//=> {ios: 8, mac: 6}
 	//         ^ days

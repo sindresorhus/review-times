@@ -34,11 +34,16 @@
   ],
   "dependencies": {
     "cheerio": "^0.19.0",
-    "got": "^3.2.0",
-    "meow": "^3.3.0"
+    "got": "^4.2.0",
+    "meow": "^3.4.0"
   },
   "devDependencies": {
     "ava": "*",
     "xo": "*"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
   }
 }

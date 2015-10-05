@@ -1,14 +1,11 @@
 import test from 'ava';
-import reviewTimes from './';
+import fn from './';
 
-test(t => {
-	t.plan(5);
+test(async t => {
+	const times = await fn();
 
-	reviewTimes((err, times) => {
-		t.ifError(err);
-		t.is(typeof times.ios, 'number');
-		t.is(typeof times.mac, 'number');
-		t.true(times.ios > 0);
-		t.true(times.mac > 0);
-	});
+	t.is(typeof times.ios, 'number');
+	t.is(typeof times.mac, 'number');
+	t.true(times.ios > 0);
+	t.true(times.mac > 0);
 });
