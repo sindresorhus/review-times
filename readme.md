@@ -28,9 +28,9 @@ $ npm install --save review-times
 ```
 
 ```js
-var reviewTimes = require('review-times');
+const reviewTimes = require('review-times');
 
-reviewTimes.then(function (times) {
+reviewTimes.then(times => {
 	console.log(times);
 	//=> {ios: 8, mac: 6}
 	//         ^ days
