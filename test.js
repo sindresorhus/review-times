@@ -1,11 +1,10 @@
 import test from 'ava';
-import fn from './';
+import m from './';
 
 test(async t => {
-	const times = await fn();
-
-	t.is(typeof times.ios, 'number');
-	t.is(typeof times.mac, 'number');
-	t.true(times.ios > 0);
-	t.true(times.mac > 0);
+	const times = await m();
+	t.is(typeof times.iOS, 'number');
+	t.is(typeof times.macOS, 'number');
+	t.true(times.iOS > 0);
+	t.true(times.macOS > 0);
 });

@@ -1,18 +1,13 @@
 'use strict';
-var got = require('got');
-var cheerio = require('cheerio');
+const got = require('got');
+const cheerio = require('cheerio');
 
-module.exports = function () {
-	return got('appreviewtimes.com').then(function (data) {
-		var $ = cheerio.load(data.body);
+module.exports = () => got('appreviewtimes.com').then(data => {
+	const $ = cheerio.load(data.body);
+	const get = sel => parseInt($(sel).text(), 10);
 
-		var get = function (sel) {
-			return parseInt($(sel).text(), 10);
-		};
-
-		return {
-			ios: get('.ios .average'),
-			macos: get('.mac .average')
-		};
-	});
-};
+	return {
+		iOS: get('.ios .average'),
+		macOS: get('.mac .average')
+	};
+});

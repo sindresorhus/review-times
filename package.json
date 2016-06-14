@@ -11,7 +11,7 @@
   },
   "bin": "cli.js",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && ava"
@@ -34,8 +34,8 @@
     "store"
   ],
   "dependencies": {
-    "cheerio": "^0.19.0",
-    "got": "^5.0.0",
+    "cheerio": "^0.20.0",
+    "got": "^6.3.0",
     "meow": "^3.4.0"
   },
   "devDependencies": {

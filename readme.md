@@ -32,7 +32,7 @@ const reviewTimes = require('review-times');
 
 reviewTimes.then(times => {
 	console.log(times);
-	//=> {ios: 8, macos: 6}
+	//=> {iOS: 8, macOS: 6}
 	//         ^ days
 });
 ```
@@ -40,4 +40,4 @@ reviewTimes.then(times => {
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
