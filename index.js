@@ -12,7 +12,7 @@ module.exports = function () {
 
 		return {
 			ios: get('.ios .average'),
-			mac: get('.mac .average')
+			macos: get('.mac .average')
 		};
 	});
 };

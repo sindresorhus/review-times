@@ -6,11 +6,11 @@ var reviewTimes = require('./');
 meow([
 	'Example',
 	'  $ review-times',
-	'  iOS  8 days',
-	'  Mac  6 days'
+	'  iOS    8 days',
+	'  macOS  6 days'
 ]);
 
 reviewTimes().then(function (times) {
-	console.log('iOS  ' + times.ios + ' days');
-	console.log('Mac  ' + times.mac + ' days');
+	console.log('iOS    ' + times.ios + ' days');
+	console.log('macOS  ' + times.macos + ' days');
 });

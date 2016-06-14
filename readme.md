@@ -1,6 +1,6 @@
 # review-times [![Build Status](https://travis-ci.org/sindresorhus/review-times.svg?branch=master)](https://travis-ci.org/sindresorhus/review-times)
 
-> Get the average review times for the iOS and Mac App Store - provided by [appreviewtimes.com](http://appreviewtimes.com)
+> Get the average review times for the iOS & macOS App Store - provided by [appreviewtimes.com](http://appreviewtimes.com)
 
 
 ## CLI
@@ -16,8 +16,8 @@ $ review-times --help
 
   Example
     $ review-times
-    iOS  8 days
-    Mac  6 days
+    iOS    8 days
+    macOS  6 days
 ```
 
 
@@ -32,7 +32,7 @@ const reviewTimes = require('review-times');
 
 reviewTimes.then(times => {
 	console.log(times);
-	//=> {ios: 8, mac: 6}
+	//=> {ios: 8, macos: 6}
 	//         ^ days
 });
 ```
