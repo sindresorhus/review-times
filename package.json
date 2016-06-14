@@ -1,6 +1,6 @@
 {
   "name": "review-times",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Get the average review times for the iOS & macOS App Store",
   "license": "MIT",
   "repository": "sindresorhus/review-times",
